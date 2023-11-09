@@ -6,8 +6,10 @@
 */
 
 @import url('./reset.css');
-@import url('./vite-promo.css');
 @import url('./header.css');
+@import url('./home.css');
+@import url('./rent-block.css');
+@import url('./footer.css');
 
 :root {
   font-family: DM Sans, sans-serif;
