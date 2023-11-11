@@ -16,7 +16,8 @@ function listMarkup(genre) {
 
 function createList() {
 
-    API_SERVICE.fetchBooksCategoryList()()
+    const apiService = new API_SERVICE();
+    apiService.fetchBooksCategoryList()
         .then(response => {
             const data = response.data
             console.log(data);
