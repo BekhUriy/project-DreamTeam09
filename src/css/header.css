@@ -93,6 +93,7 @@ input:checked+.slider:before {
     display: flex;
     align-items: center;
     margin-right: 40px;
+    /* gap: 8px; */
 
     font-weight: 500;
 }
@@ -109,6 +110,9 @@ input:checked+.slider:before {
     }
 }
 
+.header-logo{
+    margin-right: 8px;
+}
 
 .header-nav {
     display: none;
@@ -117,6 +121,19 @@ input:checked+.slider:before {
 
 .header-nav-list {
     display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* .header-nav-item:nth-child(2n) {
+display: flex;
+align-items: center;
+
+} */
+.header-nav-link{
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .header-nav-link {
@@ -126,7 +143,7 @@ input:checked+.slider:before {
 }
 
 .header-nav-link:hover,
-.header-nav-link:focus {
+.header-nav-link:focus { 
     background-color: var(--background_active);
     font-weight: 700;
 }
