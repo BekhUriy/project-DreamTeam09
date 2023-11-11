@@ -11,6 +11,7 @@
 @import url('./rent-block.css');
 @import url('./footer.css');
 @import url('./best-sellers.css');
+@import url('./skrollBtn.css');
 
 :root {
   font-family: DM Sans, sans-serif;
