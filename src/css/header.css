@@ -304,3 +304,8 @@ border-radius: 8px;
 
 
 }
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
