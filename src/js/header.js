@@ -1,24 +1,22 @@
 const modalW = document.querySelector('.header-modal');
 const modalWinBtn = document.querySelector('.modal-open-btn');
-const body = document.querySelector('body');
-console.dir(body);
-console.log(modalWinBtn);
+const allbody = document.querySelector('body');
+const burger = document.querySelector('.open-icon');
+
+console.dir(burger.innerHTML);
 
 modalWinBtn.addEventListener('click', modWin);
-body.addEventListener('wheel', stopScroll);
 
 function modWin(event) {
-  console.log(modalW.classList);
   if (modalW.classList.contains('hidden-modal')) {
     modalW.classList.remove('hidden-modal');
+    allbody.classList.add('stop-scrolling');
+    burger.innerHTML = `<use href="./img/sprit.svg#x-close"/>`;
+
     return;
   } else {
     modalW.classList.add('hidden-modal');
+    allbody.classList.remove('stop-scrolling');
+    burger.innerHTML = `<use href="./img/sprit.svg#icon-burger"/>`;
   }
-}
-
-function stopScroll(evt) {
-  console.log(evt);
-  //   evt.preventDefault();
-  evt.stopPropagation();
 }

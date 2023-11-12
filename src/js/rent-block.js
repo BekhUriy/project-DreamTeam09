@@ -1,13 +1,16 @@
-<section class="shopping">
-  <div class="shopping-wrapper">
-    <h1 class="shopping-heading">
-      Shopping<span class="shopping-heading-color"> List</span>
-    </h1>
+import { API_SERVICE } from "./api-requests";
 
-    <ul class="shopping-cards"></ul>
 
-    <ul class="shopping-cards">
-      <li class="shopping-card">
+const listCreate = document.querySelector('.shopping-cards');
+const listItemCreate = document.querySelector('.shopping-card');
+const shoppingStorage = document.querySelector('.shopping-storage');
+
+function getShoppingItems() {
+
+}
+function shoppingListMarcup(arr) {
+  return map.arr(({}) => `
+  <li class="shopping-card">
         <div class="shopping-card-img">
           <img src="./img/Rectangle-13.png" alt="book" />
         </div>
@@ -25,7 +28,7 @@
               rel="noopener noreferrer"
               aria-label="Amazon-book site"
             >
-              <img src="#" alt="" />
+              <img src="" alt="" />
             </a>
           </li>
           <li class="shopping-shop">
@@ -35,7 +38,7 @@
               rel="noopener noreferrer"
               aria-label="Book-shop site"
             >
-              <img src="#" alt="" />
+              <img src="" alt="" />
             </a>
           </li>
         </ul>
@@ -48,18 +51,5 @@
             <use href=""></use>
           </svg>
         </button>
-      </li>
-    </ul>
-    <div
-      id="shopping-pagination-container"
-      class="shopping-pagination pagination"
-    ></div>
-
-    <div class="shopping-storage">
-      <p class="shopping-storage-empty">
-        This page is empty, add some books and proceed to order.
-      </p>
-      <img src="./img/IMG_9606-1.png" alt="No books" />
-    </div>
-  </div>
-</section>
+      </li>`).join('')
+}
