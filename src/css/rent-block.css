@@ -1,6 +1,6 @@
 .shopping-wrapper {
   height: 812px;
-  background: #F6F6F6;
+  background: #f6f6f6;
   padding-top: 40px;
 }
 h1 .shopping-heading {
@@ -18,7 +18,7 @@ h1 .shopping-heading {
 }
 .shopping-heading-color {
   margin-top: 112px;
-  color: #4F2EE8;
+  color: #4f2ee8;
   font-family: DM Sans;
   font-size: 32px;
   font-style: normal;
@@ -27,7 +27,7 @@ h1 .shopping-heading {
   letter-spacing: -1.28px;
 }
 .shopping-storage-empty {
-  color: rgba(0, 0, 0, 0.60);
+  color: rgba(0, 0, 0, 0.6);
   text-align: center;
   font-family: DM Sans;
   font-size: 18px;
@@ -111,8 +111,8 @@ ul {
   align-items: flex-start;
   flex-shrink: 0;
   border-radius: 16px;
-  border: 2px solid rgba(79, 46, 232, 0.40);
-  background: #FFF;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  background: #fff;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -141,7 +141,7 @@ ul {
   text-transform: uppercase;
 }
 .shopping-book-category {
-  color: #B4AFAF;
+  color: #b4afaf;
   margin-bottom: 6px;
   margin-top: 4px;
   width: 101px;
@@ -161,7 +161,7 @@ ul {
   color: #111;
   white-space: nowrap;
   text-overflow: ellipsis;
-  text-wrap: wrap;
+  /* text-wrap: wrap; */
   font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
@@ -173,7 +173,7 @@ ul {
   display: block;
   min-width: 71px;
   min-height: 14px;
-  color: #B4AFAF;
+  color: #b4afaf;
   margin: 0;
   font-family: DM Sans;
   font-size: 12px;
@@ -191,8 +191,8 @@ ul {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
-  background-color: #4F2EE8;
-  fill: #4F2EE8;
+  background-color: #4f2ee8;
+  fill: #4f2ee8;
 }
 .shopping-shops {
   height: 16px;
@@ -203,11 +203,13 @@ ul {
   bottom: 0;
   right: 0;
 }
-.shopping-shop-amazon{
-  background: url(<path-to-image>), lightgray 0.574px 0px / 97.61% 100% no-repeat;
-    mix-blend-mode: luminosity;
+.shopping-shop-amazon {
+  background: url(<path-to-image>),
+    lightgray 0.574px 0px / 97.61% 100% no-repeat;
+  mix-blend-mode: luminosity;
 }
 .shopping-shop-bookshop {
-  background: url(<path-to-image>), lightgray 0px -0.75px / 100% 105.556% no-repeat;
+  background: url(<path-to-image>),
+    lightgray 0px -0.75px / 100% 105.556% no-repeat;
   mix-blend-mode: luminosity;
 }
