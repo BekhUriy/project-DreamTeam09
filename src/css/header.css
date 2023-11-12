@@ -165,18 +165,28 @@ align-items: center;
 }
 
 .header-modal {
-    
-    height: 100vh;
+    position:absolute;
+    height: 100%;
+    width: 100%;
     background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, var(--text-hover) 18.03%, var(--background_l) 100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 183px;
+    align-items: center;
+    overflow: hidden;
 }
 
 .header-modal-list {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
     gap: 16px;
-    padding-top: 183px;
-    padding-left: 129px;
+    width: 118px;
+    height: 70px;
+   
+    /* margin: 247px auto; */
+    /* padding-top: 183px;
+    padding-left: 129px; */
 }
 
 .modal-open-btn {
@@ -189,10 +199,108 @@ align-items: center;
 .active{
         padding: 7px 16px;
         background-color: #EAC645;
-        border-radius: 36px;
+        border-radius: 50%;
         font-weight: 700;
 }
 
 .hidden-modal {
     display: none;
+}
+.modal-stephan{
+
+    position:absolute;
+    left: 20px;
+    top: 20px;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+
+}
+.user-img{
+    border-radius: 50px;
+    width: 37px;
+    height: 37px;
+    overflow: hidden;
+
+}
+.modal-stephan-img { 
+
+}
+
+.user-name {
+color: #FFFFFF;
+
+font-size: 22px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: -0.02em;
+text-align: left;
+
+  
+}
+
+.modal-home-btn {
+width: 72px;
+height: 34px;
+padding: 8px 16px;
+border-radius: 36px;
+background: #EAC645;
+
+
+font-weight: 700;
+line-height: 18px;
+letter-spacing: -0.04em;
+text-align: left;
+
+
+}
+.modal-shop-btn {
+    width: 150px;
+    height: 20px;
+
+color: #FFFFFF;
+
+font-weight: 500;
+line-height: 18px;
+letter-spacing: -0.04em;
+text-align: left;
+
+
+}
+.modal-shop-link {
+display: flex;
+gap: 4px;
+}
+.modal-shop-icon {
+
+background-color: wheat;
+}
+
+.modal-gallery {
+position: absolute;
+width: 450px;
+height: 439px;
+top: 505px;
+left: -20px;
+border-radius: 8px;
+rotate: -15deg;
+opacity: 100%;
+overflow: hidden;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 30px;
+
+
+}
+
+
+.modal-gallery-img {
+width: 90px;
+height: 133px;
+border-radius: 8px;
+
+
+
 }
