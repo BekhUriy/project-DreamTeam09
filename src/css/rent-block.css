@@ -87,3 +87,117 @@ p.shopping-storage-empty {
     margin: 140px 355px 0 356px;
   }
 }
+/* === rent-block ===*/
+li,
+ul {
+  list-style-type: none;
+}
+.shopping-cards {
+  max-width: 375px;
+  margin-top: 40px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.shopping-card {
+  position: relative;
+  display: flex;
+  padding: 14px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.40);
+  background: #FFF;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.shopping-blok {
+  position: relative;
+  width: 193px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px;
+}
+.shopping-card-wrapper {
+  width: 100px;
+  height: 142px;
+}
+.shopping-book-title {
+  margin: 0;
+  width: 114px;
+  height: 18px;
+  color: #111;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+.shopping-book-category {
+  color: #B4AFAF;
+  margin-bottom: 6px;
+  margin-top: 4px;
+  width: 101px;
+  height: 14px;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.36px;
+}
+.shopping-book-description {
+  width: 193px;
+  height: 68px;
+  margin: 0 0 14px 0;
+  overflow: hidden;
+  color: #111;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-wrap: wrap;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+}
+.shopping-book-autor {
+  display: block;
+  min-width: 71px;
+  min-height: 14px;
+  color: #B4AFAF;
+  margin: 0;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.48px;
+}
+.shopping-btn-delete {
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  background-color: #4F2EE8;
+  fill: #4F2EE8;
+}
+.shopping-shops {
+  height: 16px;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
