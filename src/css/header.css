@@ -165,7 +165,7 @@ align-items: center;
 }
 
 .header-modal {
-    display: none;
+    
     height: 100vh;
     background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, var(--text-hover) 18.03%, var(--background_l) 100%);
 }
@@ -191,4 +191,8 @@ align-items: center;
         background-color: #EAC645;
         border-radius: 36px;
         font-weight: 700;
+}
+
+.hidden-modal {
+    display: none;
 }
