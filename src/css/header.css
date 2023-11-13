@@ -261,6 +261,8 @@ text-align: left;
 .modal-shop-link {
 display: flex;
 gap: 4px;
+align-items: center;
+
 }
 .modal-shop-icon {
 stroke: #FFFFFF;
