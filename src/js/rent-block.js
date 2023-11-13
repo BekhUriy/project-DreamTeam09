@@ -1,8 +1,21 @@
 import { API_SERVICE } from './api-requests';
 const listCreate = document.querySelector('.shopping-cards');
-const listItemCreate = document.querySelector('.shopping-card');
-const shoppingStorage = document.querySelector('.shopping-storage');
+const shoppingCard = document.querySelector('.shopping-card')
+const deleteShoppingList = document.querySelector('.shopping-btn-delete');
 const apiShoppingList = new API_SERVICE();
+const remove = key => {
+  try {
+    localStorage.removeItem(key);
+  } catch (error) {
+    console.error('Remove state error: ', error.message);
+  }
+};
+
+deleteShoppingList.addEventListener('click', onTrushBtn);
+function onTrushBtn(evt) {
+  evt.currentTarget.remove();
+  remove();
+};
 
 function createMarcup() {
   apiShoppingList
@@ -41,12 +54,12 @@ function createMarcup() {
           </li>
           <li class="shopping-shop">
             <a
-              href="${buy_links}"
+              href="${buy_links[0].url}"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Book-shop site"
+              aria-label="Apple-book site"
             >
-              <img src="./img/bookshop.png" class="shopping-shop-bookshop" alt="${buy_links[0].name}" />
+              <img src="./img/appleBook.png" class="shopping-shop-appleBook" alt="${buy_links[0].name}" />
             </a>
           </li>
         </ul>
