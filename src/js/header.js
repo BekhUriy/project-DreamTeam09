@@ -3,7 +3,7 @@ const modalWinBtn = document.querySelector('.modal-open-btn');
 const allbody = document.querySelector('body');
 const burger = document.querySelector('.open-icon');
 
-console.dir(burger.innerHTML);
+// console.dir(burger.innerHTML);
 
 modalWinBtn.addEventListener('click', modWin);
 
