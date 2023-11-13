@@ -3,6 +3,9 @@ const listCreate = document.querySelector('.shopping-cards');
 const shoppingCard = document.querySelector('.shopping-card')
 const deleteShoppingList = document.querySelector('.shopping-btn-delete');
 const apiShoppingList = new API_SERVICE();
+const shoppingStorage = document.querySelector('.shopping-storage');
+shoppingStorage.style.display = "none";
+
 const remove = key => {
   try {
     localStorage.removeItem(key);
@@ -81,7 +84,7 @@ function createMarcup() {
     });
 }
 
-function getShoppingItems() {
+f/* unction getShoppingItems() {
   if (localStorage.length > 0) {
     shoppingStorage.style.display = 'none';
     listCreate.innerHTML = createMarcup();
@@ -91,3 +94,4 @@ function getShoppingItems() {
   }
 }
 getShoppingItems();
+ */
