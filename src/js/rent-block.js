@@ -1,6 +1,4 @@
-import { API_SERVICE } from "./api-requests";
-
-
+import { API_SERVICE } from './api-requests';
 const listCreate = document.querySelector('.shopping-cards');
 const shoppingCard = document.querySelector('.shopping-card')
 const deleteShoppingList = document.querySelector('.shopping-btn-delete');
@@ -20,9 +18,19 @@ function onTrushBtn(evt) {
 };
 
 function createMarcup() {
-  apiShoppingList.fetchBookById(bookId)
+  apiShoppingList
+    .fetchBookById(bookId)
     .then(response => {
-      return response.data.map(({ book_image, title, list_name, description, author, buy_links: [{ name, url }] }) => `
+      return response.data
+        .map(
+          ({
+            book_image,
+            title,
+            list_name,
+            description,
+            author,
+            buy_links: [{ name, url }],
+          }) => `
   <li class="shopping-card">
         <div class="shopping-card-img">
           <img src="${book_image}" alt="${title}"/>
@@ -64,11 +72,14 @@ function createMarcup() {
             <use href=./img/sprit.svg#icon-trash-03"></use>
           </svg>
         </button>
-      </li>`).join('')
-    }
-  )
-  .catch(error => { console.error(error) });
-};
+      </li>`
+        )
+        .join('');
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
 
 function getShoppingItems() {
   if (localStorage.length > 0) {
@@ -77,6 +88,6 @@ function getShoppingItems() {
   } else {
     listCreate.style.display = 'none';
     shoppingStorage.style.display = 'block';
-}
+  }
 }
 getShoppingItems();
