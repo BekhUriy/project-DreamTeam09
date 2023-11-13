@@ -63,7 +63,7 @@ gap: 25px;
   height: 535px;
   display:none;
   cursor: pointer;
-  /* position: relative; */
+  position: relative;
 }
 
 .best-sellers-book:first-child{
@@ -90,7 +90,13 @@ display: block;
     .best-sellers-book{
       width: 180px;
       height: 306px;
-      display: block;
+      display: block
+      /* position: relative; */
+    }
+    .best-sellers-book:hover .book-overlay,
+    .best-sellers-book:focus .book-overlay{
+      visibility: visible;
+      top: 116px;
     }
     .best-sellers-list-in-category{
       margin-bottom: 32px;
@@ -103,7 +109,6 @@ height: 485px;
 border-radius: 8px;
 margin-bottom: 14px;
 align-self: center;
-/* position: relative; */
 }
 
 .best-sellers-book-img{
@@ -117,6 +122,7 @@ align-self: center;
 @media only screen and (min-width: 1140px){
   width: 180px;
   height: 256px;
+
 }
 }
 /* @media only screen and (min-width: 768px) {
@@ -129,20 +135,27 @@ height: 366px;
   height: 306px;
 } */
 
-/* .overlay{
+.book-overlay{
+  visibility: hidden;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--background_active);
-  top: 0;
+  top: 176px;
   left: 0;
   width: 100%;
-  height: 100%;
-  color: var(--cloud-light-color);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
+  height: 70px;
+  border-radius: 0px 0px 8px 8px;
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.28; 
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
+}
+
 .best-sellers-book-title {
   color: var(--text);
 font-size: 16px;
@@ -170,13 +183,19 @@ margin-bottom: 8;
   margin-left: auto;
   padding: 14px 28px;
   border-radius: 40px;
-border: 2px solid var(--text-hover);
-background-color: transparent;
-color: var(--text);
-font-weight: 700;
-line-height: 1.28; /* 128.571% */
-letter-spacing: -0.14px;
-text-transform: uppercase;
+  border: 2px solid var(--text-hover);
+  background-color: transparent;
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.28; /* 128.571% */
+  letter-spacing: -0.14px;
+  text-transform: uppercase;
 
-margin-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.best-sellers-see-more-button:hover,
+.best-sellers-see-more-button:focus {
+  background-color: var(--text-hover);
+  color: #FFF;
 }
