@@ -2,9 +2,10 @@ import { API_SERVICE } from "./api-requests";
 
 
 const listCreate = document.querySelector('.shopping-cards');
-const listItemCreate = document.querySelector('.shopping-card');
-const shoppingStorage = document.querySelector('.shopping-storage');
+const deleteShoppingList = document.querySelector('.shopping-btn-delete');
 const apiShoppingList = new API_SERVICE();
+
+deleteShoppingList.addEventListener('click'((evt)=>{evt.currentTurget.remove()}))
 
 function createMarcup() {
   apiShoppingList.fetchBookById(bookId)
