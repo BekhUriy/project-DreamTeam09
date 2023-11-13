@@ -20,3 +20,16 @@ function modWin(event) {
     burger.innerHTML = `<use href="./img/sprit.svg#icon-burger"/>`;
   }
 }
+
+// js for links
+
+const homePage = document.querySelector('.js-home-link');
+const shoppingListPage = document.querySelector('.js-home-link');
+
+const currentPage = location.pathname;
+
+if (currentPage === '/project-DreamTeam09/home.html') {
+    homePage.classList.add('active')
+} else {
+  shoppingListPage.classList.add('current')
+}
