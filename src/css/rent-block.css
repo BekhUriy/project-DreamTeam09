@@ -178,7 +178,7 @@ ul {
   color: #111;
   white-space: nowrap;
   text-overflow: ellipsis;
-  text-wrap: wrap;
+ /*  text-wrap: wrap; */
   font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
@@ -219,15 +219,4 @@ ul {
   position: absolute;
   bottom: 0;
   right: 0;
-}
-
-.shopping-shop-amazon {
-  background: url(<path-to-image>),
-    lightgray 0.574px 0px / 97.61% 100% no-repeat;
-  mix-blend-mode: luminosity;
-}
-.shopping-shop-bookshop {
-  background: url(<path-to-image>),
-    lightgray 0px -0.75px / 100% 105.556% no-repeat;
-  mix-blend-mode: luminosity;
 }
