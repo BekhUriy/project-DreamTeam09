@@ -10,6 +10,7 @@
 @import url('./best-sellers.css');
 @import url('./category-list.css');
 @import url('./support-ua.css');
+@import url('./about-book-modal.css');
 
 :root {
   font-family: DM Sans, sans-serif;
@@ -106,6 +107,5 @@
   --text-gray: #b4afaf; */
   --background_l: #202024;
   --text: #ffffff;
-
   color-scheme: dark;
 } 
