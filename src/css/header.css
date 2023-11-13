@@ -1,3 +1,21 @@
+:root {
+  font-family: DM Sans, sans-serif;
+  font-size: 14px;
+  line-height: 1, 12;
+  font-weight: 400;
+  --bold: 700;
+  font-style: normal;
+  --background_l: #f6f6f6;
+  --background_d: #202024;
+  --background_m: rgba(17, 17, 17, 0.4);
+  --background_active: #eac645;
+  --text: #111;
+  --text-menu: rgba(17, 17, 17, 0.6);
+  --text-hover: #4f2ee8;
+  --text-gray: #b4afaf;
+}
+
+
 .switch {
     position: relative;
     display: inline-block;
@@ -190,7 +208,7 @@ align-items: center;
 }
 
 .modal-open-btn {
-    stroke: black;
+    stroke: var(--text);
     margin-left: 14px;
     padding: 0;
     background-color: #FFF;
@@ -199,7 +217,7 @@ align-items: center;
 
 .active{
         padding: 7px 16px;
-        background-color: #EAC645;
+        background-color: var(--background_active);
         border-radius: 50%;
         font-weight: 700;
 }
@@ -246,7 +264,7 @@ width: 72px;
 height: 34px;
 padding: 8px 16px;
 border-radius: 36px;
-background: #EAC645;
+background: var(--background_active);
 
 
 font-weight: 700;
@@ -272,35 +290,26 @@ text-align: left;
 .modal-shop-link {
 display: flex;
 gap: 4px;
+justify-content:flex-start;
+align-items: center;
 }
 .modal-shop-icon {
-stroke: #FFFFFF;
 
-
+stroke: #FFF;
 }
 
-.modal-gallery {
-position: absolute;
-width: 450px;
-height: 439px;
-top: 505px;
-left: -20px;
-border-radius: 8px;
-rotate: -15deg;
-opacity: 100%;
-overflow: hidden;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-gap: 30px;
 
-
-}
 
 
 .modal-gallery-img {
-width: 90px;
-height: 133px;
+position: absolute;
+bottom: 0px;
+left: 0px;
+border-radius: 8px;
+overflow: hidden;
+opacity: 100%;
+width: 100%;
+max-height: 60%;
 border-radius: 8px;
 
 
@@ -310,13 +319,4 @@ border-radius: 8px;
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
-}
-.logout-btn {
-    position: absolute;
-   width: 118px;
-   height: 48px;
-   background-color: #EAC645;
-   top: 300px;
-   left: 20px;
-
 }
