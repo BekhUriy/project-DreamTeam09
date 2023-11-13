@@ -1,3 +1,6 @@
+.donation{
+  display: none;
+}
 .shopping-wrapper {
   height: 812px;
   background: #f6f6f6;
@@ -77,7 +80,22 @@ p.shopping-storage-empty {
 }
 
 @media only screen and (min-width: 1440px) {
+  .donation {
+      display: block;
+      margin: 40px 0 0 24px;
+    }
+    body{
+position: relative;
+background: #f6f6f6;
+    }
+    .header{
+  background: #FFF;
+    }
   .shopping-wrapper {
+
+     position: absolute;
+    top:65px;
+    right: 0;
     height: 770px;
   }
   .shopping-heading {
