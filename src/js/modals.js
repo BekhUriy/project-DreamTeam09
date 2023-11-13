@@ -6,9 +6,17 @@ const closeModalBtn = document.querySelector('#modal-close');
 const fireBaseBackdrop = document.querySelector('.fire-base-backdrop');
 const idBackdropModal = document.querySelector('.js-backdrop-modal');
 
-function openModalId() {
-  idModal.classList.remove('is-hidden');
-  idBackdropModal.classList.remove('is-hidden');
+
+
+function openModalId(e) {
+        
+        e.preventDefault();
+        const bookId = this.getAttribute('data-book-id');
+        idModal.classList.remove('is-hidden');
+        idBackdropModal.classList.remove('is-hidden');  
+        console.log(bookId);
+        createModal(bookId);
+
 }
 
 function closeModalId() {

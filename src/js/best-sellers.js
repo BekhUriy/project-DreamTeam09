@@ -1,4 +1,5 @@
 import { API_SERVICE} from "./api-requests";
+import { openModalId } from "./modals";
 // import Notiflix from "notiflix";
 
 const topBooksByCategories = document.querySelector('.best-sellers-books')
@@ -17,10 +18,11 @@ async function bestSellersMarkup () {
 
             // console.log(topCategory);
             const booksArr = topCategory.books.map((book)=>
-             `<li class="best-sellers-book" data-book-id="${book._id}">
+             `<li class="best-sellers-book js-open-modal" data-book-id="${book._id}">
              <img class="best-sellers-book-img" src="${book.book_image}" alt="${book.title}" />
              <p class="best-sellers-book-title">${book.title}</p>
              <p class="best-sellers-book-author">${book.author}</p>
+            //  <p class="overlay">Quick view</p>
 </li>`
             ).join('');
             // console.log(booksArr);
@@ -35,6 +37,13 @@ async function bestSellersMarkup () {
                     </li>`)
         }).join('')
     })
+    .then(()=>{
+       const openBookEl = document.querySelectorAll('.js-open-modal');
+        openBookEl.forEach(function(item){
+                //  console.log(item);
+                 item.addEventListener('click', openModalId);
+    })
+    })
     .catch(error => {
         console.log(error.message);
         topBooksByCategories.innerHTML = 'No information';
@@ -42,4 +51,4 @@ async function bestSellersMarkup () {
 
     return result;
     }
-
+    

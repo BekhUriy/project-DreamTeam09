@@ -34,9 +34,9 @@ storageButton.addEventListener('click', onStorageAdd);
 
 removeStorageBtn.addEventListener('click', onStorageDelete);
 
-bookList.addEventListener('click', onIdClick); // Panov
+// bookList.addEventListener('click', onIdClick); // Panov
 
-categorieList.addEventListener('click', onIdClick); // Perevertnyk
+// categorieList.addEventListener('click', onIdClick); // Perevertnyk
 
 function onIdClick(e) {
   if (
