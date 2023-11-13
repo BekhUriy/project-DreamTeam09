@@ -23,6 +23,7 @@ async function bestSellersMarkup () {
              <p class="best-sellers-book-title">${book.title}</p>
              <p class="best-sellers-book-author">${book.author}</p>
              <p class="book-overlay">Quick view</p>
+
 </li>`
             ).join('');
             // console.log(booksArr);

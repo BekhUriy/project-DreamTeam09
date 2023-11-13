@@ -2,21 +2,11 @@ import { openModalId } from './modals';
 
 import amazonPng from '../img/modal/amazon-icon1x.png';
 
-import amazonPng2x from '../img/modal/amazon-icon2x.png';
-
 import appleBookPng from '../img/modal/applebook-icon1x.png';
 
-import appleBookPng2x from '../img/modal/applebook-icon2x.png';
 
-import bookShopPng from '../img/modal/bookshop-icon1x.png';
-
-import bookShopPng2x from '../img/modal/bookshop-icon2x.png';
 
 const allModal = document.querySelector('#allModal');
-
-const categorieList = document.querySelector('.categorie-list'); // Perevertnyk
-
-const bookList = document.querySelector('.category__books'); // Panov
 
 const storageButton = document.querySelector('.add-storage-button');
 
@@ -33,26 +23,6 @@ let storageObj = {};
 storageButton.addEventListener('click', onStorageAdd);
 
 removeStorageBtn.addEventListener('click', onStorageDelete);
-
-// bookList.addEventListener('click', onIdClick); // Panov
-
-// categorieList.addEventListener('click', onIdClick); // Perevertnyk
-
-function onIdClick(e) {
-  if (
-    e.target.nodeName === 'BUTTON' ||
-    e.target.nodeName === 'UL' ||
-    e.target.nodeName === 'DIV' ||
-    e.target.nodeName === 'H3'
-  )
-    return;
-
-  const id = e.target.closest('li').id;
-
-  openModalId();
-
-  createModal(id);
-}
 
 async function createModal(bookId) {
   allModal.innerHTML = '';
@@ -147,89 +117,28 @@ function createMarkup(data) {
 
   const marketBookshop = data.buy_links[4].url;
 
-  const html = `  
+  const bookDescription = data.description;
 
-  <img src="${bookModalImage}" alt="Book Image" class="image-about-book-modal">
-
-  <div class="info-modal">
-
-  <h2 class="title-about-book-modal">${bookTitle}</h2>
-
-  <p class="author-about-book-modal"> ${bookAuthor}</p>
-
-  <p class="text-about-book-modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, iure nam facere exercitationem quibusdam cum in quasi impedit perferendis porro. Vero quos minima doloribus magni corporis beatae ducimus officiis! Rerum?</p>
-
-  <ul class="shop-modal-list"> <li class="shop-modal-item"><a href="${marketAmazon}" target="_blank"
-
-    > <img
-
-     width="62"
-
-    height="19"
-
-    srcset="
-
-    ${amazonPng} 1x,
-
-    ${amazonPng2x} 2x
-
-  "
-
-   src="${amazonPng}"
-
-    alt="Amazon"
-
-  /></a></li>
-
-  <li class="shop-modal-item"><a href="${marketAppleBooks}" target="_blank"
-
-    > <img
-
-    width="33"
-
-    height="32"
-
-    srcset="
-
-    ${appleBookPng} 1x,
-
-    ${appleBookPng2x} 2x
-
-  "
-
-   src="${appleBookPng}"
-
-    alt="AppleBooks"
-
-  /></a></li>
-
-  <li class="shop-modal-item"><a href="${marketBookshop}" target="_blank"
-
-    > <img
-
-    width="38"
-
-    height="36"
-
-    srcset="
-
-    ${bookShopPng} 1x,
-
-    ${bookShopPng2x} 2x
-
-  "
-
-   src="${bookShopPng}"
-
-    alt="Book-Shop"
-
-  /></a></li>
-
-</ul>
-
-</div>
-
-  `;
+  const html = ` <div class="modal" id="bookModal">
+        <img src="${bookModalImage}" alt="Book Cover" class="image-about-book-modal">
+        <h2 id="modalTitle" class="title-about-book-modal">${bookTitle}</h2>
+        <p class="author-about-book-modal"> ${bookAuthor}</p>
+        <p class="text-about-book-modal">${bookDescription}</p>
+        <div id="platformLinks">
+        <ul class="shop-modal-list">
+        <li class="shop-modal-item">
+          <a href="${marketAmazon}" target="_blank">
+          <img width="62" height="19" src="${amazonPng}"alt="Amazon"/>
+          </a>
+        </li>
+        <li class="shop-modal-item"><a href="${marketAppleBooks}" target="_blank">
+        <img width="33" height="32" src="${appleBookPng}" alt="AppleBooks"/>
+        </a>
+        </li>
+        </ul>
+        
+        </div>`
+;
 
   allModal.innerHTML = html;
 }
