@@ -7,5 +7,4 @@ import './js/header.js';
 import './js/dark-theme.js';
 import './js/about-book-modal.js';
 import './js/modals.js';
-import './js/rent-block.js';
 import './js/support-slider.js';
