@@ -11,7 +11,7 @@ function modWin(event) {
   if (modalW.classList.contains('hidden-modal')) {
     modalW.classList.remove('hidden-modal');
     allbody.classList.add('stop-scrolling');
-    burger.innerHTML = `<use href="./img/sprit.svg#x-close"/>`;
+    burger.innerHTML = `<use href="./img/sprit.svg#icon-x"/>`;
 
     return;
   } else {
@@ -29,7 +29,7 @@ const shoppingListPage = document.querySelector('.js-home-link');
 const currentPage = location.pathname;
 
 if (currentPage === '/project-DreamTeam09/home.html') {
-    homePage.classList.add('active')
+  homePage.classList.add('active');
 } else {
-  shoppingListPage.classList.add('current')
+  shoppingListPage.classList.add('current');
 }
