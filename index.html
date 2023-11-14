@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/project-DreamTeam09/favicon.svg" />
+    <!--     <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelf</title>
     <link
@@ -13,22 +13,22 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/project-DreamTeam09/assets/vendor-26fe51b3.js"></script>
-    <script type="module" crossorigin src="/project-DreamTeam09/assets/dark-theme-f655f948.js"></script>
-    <link rel="stylesheet" href="/project-DreamTeam09/assets/dark-theme-39655750.css">
+    <script type="module" crossorigin src="/project-DreamTeam09/assets/vendor-1c5e86dd.js"></script>
+    <script type="module" crossorigin src="/project-DreamTeam09/assets/index-e8137bf5.js"></script>
+    <link rel="stylesheet" href="/project-DreamTeam09/assets/index-23297306.css">
   </head>
+
   <body>
     <!-- Анна -->
     <header class="header">
   <div class="header-container container">
-    
     <a href="./index.html" class="header-logo-link">
       <svg class="header-logo" width="24" height="24">
-        <use href="/project-DreamTeam09/assets/sprit-3af1f536.svg#icon-logo" />
+        <use href="/project-DreamTeam09/assets/sprit-84edf0a2.svg#icon-logo" />
       </svg>
 
       <svg class="header-logo" width="77.001" height="13.266">
-        <use href="/project-DreamTeam09/assets/sprit-3af1f536.svg#icon-bookshelf" />
+        <use href="/project-DreamTeam09/assets/sprit-84edf0a2.svg#icon-bookshelf" />
       </svg>
     </a>
 
@@ -41,7 +41,7 @@
           <a href="./shoping-list.html" class="header-nav-link js-shopping-link"
             >shopping list
             <svg class="header-logo" width="24" height="24">
-              <use href="/project-DreamTeam09/assets/sprit-3af1f536.svg#icon-bag" />
+              <use href="/project-DreamTeam09/assets/sprit-84edf0a2.svg#icon-bag" />
             </svg>
           </a>
         </li>
@@ -60,130 +60,248 @@
 
       <button class="modal-open-btn">
         <svg class="open-icon" width="28" height="28">
-          <use href="/project-DreamTeam09/assets/sprit-3af1f536.svg#icon-burger" />
+          <use href="/project-DreamTeam09/assets/sprit-84edf0a2.svg#icon-burger" />
         </svg>
       </button>
     </div>
   </div>
 
-  <div class="header-modal hidden-modal">
-    <ul class="header-modal-list">
-      <li class="header-modal-item"><a href="">home</a></li>
-      <li class="header-modal-item">
-        <a href="">shopping list</a>
 
-        <svg class="header-logo" width="24" height="24">
-          <use href="/project-DreamTeam09/assets/sprit-3af1f536.svg#icon-x-closer" />
-        </svg>
+  <div class="header-modal hidden-modal">
+
+    <ul class="header-modal-list">
+      <li class="modal-home-btn"><a href="">HOME </a></li>
+      <li class="modal-shop-btn">
+        <a href="" class="modal-shop-link"
+          >SHOPPING LIST
+          <svg class="modal-shop-icon" width="20" height="20">
+            <use href="/project-DreamTeam09/assets/sprit-84edf0a2.svg#modalshopicon" />
+          </svg>
+        </a>
       </li>
     </ul>
+    <img src="/project-DreamTeam09/assets/imageA-05ddd28a.png" alt="books" class="modal-img" />
+
+    <div class="modal-stephan">
+      <img src="data:image/jpeg;base64,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" alt="userPhoto" class="user-img" />
+      <p class="user-name">Stephen</p>
+    </div>
   </div>
 </header>
 
-    <main>
+    <main class="container">
       <!-- Зоряна Чернишова -->
-      <section class="vite-promo">
-    <!-- + Categories list
-         + Support Ukraine block -->
-    <!--Best sellers-->
-<div class="selected-category-list">
-    <h1 class="home-page-title">Best Sellers <span class="home-page-title-accent">Books</span></h1>
-    <ul class="best-sellers-books">
-      <!--<li></li>
-      <li>
-        <p class="category-title"></p>
-        <ul class="best-sellers-by-category">
-          <li class="best-sellers-book" data-book-id="">
-            <img class="best-sellers-book-img" src="" alt="" />
-            <p class="best-sellers-book-title"></p>
-            <p class="best-sellers-book-author"></p>
-          </li>
-          <li class="best-sellers-book" data-book-id="">
-            <img class="best-sellers-book-img" src="" alt="" />
-            <p class="best-sellers-book-title"></p>
-            <p class="best-sellers-book-author"></p>
-          </li>
-          <li class="best-sellers-book" data-book-id="">
-            <img class="best-sellers-book-img" src="" alt="" />
-            <p class="best-sellers-book-title"></p>
-            <p class="best-sellers-book-author"></p>
-          </li>
-        </ul>
-        <button type="button">See more</button>
-        </li>-->
-    </ul> 
-</div>
 
-</section>
       <div class="category-container">
     <ul class="category">
         <li><a href="#" target="_self" class="genre active">All categories</a></li>
     </ul>
 </div>
-      ENOENT: no such file or directory, open '/home/runner/work/project-DreamTeam09/project-DreamTeam09/src/partials/support-ua.html'
-      <!--Best sellers-->
-<div class="selected-category-list">
-    <h1 class="home-page-title">Best Sellers <span class="home-page-title-accent">Books</span></h1>
-    <ul class="best-sellers-books">
-      <!--<li></li>
-      <li>
-        <p class="category-title"></p>
-        <ul class="best-sellers-by-category">
-          <li class="best-sellers-book" data-book-id="">
-            <img class="best-sellers-book-img" src="" alt="" />
-            <p class="best-sellers-book-title"></p>
-            <p class="best-sellers-book-author"></p>
-          </li>
-          <li class="best-sellers-book" data-book-id="">
-            <img class="best-sellers-book-img" src="" alt="" />
-            <p class="best-sellers-book-title"></p>
-            <p class="best-sellers-book-author"></p>
-          </li>
-          <li class="best-sellers-book" data-book-id="">
-            <img class="best-sellers-book-img" src="" alt="" />
-            <p class="best-sellers-book-title"></p>
-            <p class="best-sellers-book-author"></p>
-          </li>
-        </ul>
-        <button type="button">See more</button>
-        </li>-->
-    </ul> 
+      <div class="donation">
+  <div class="support-header">
+    <div>
+      <h2 class="header-text">Support Ukraine</h2>
+    </div>
+    <img
+      src="../img/coat-of-arms.png"
+      alt="coat of arms of Ukraine"
+      srcset="../img/coat-of-arms.png 1x, ../img/coat-of-arms@2x.png 2x"
+    />
+  </div>
+  <ol class="fonds">
+    <li class="fonds-elm">
+      <a
+        class="fonds-link"
+        href="https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="num-order">01</div>
+        <img
+          src="../img/save.png"
+          height="32"
+          alt="Save the Children"
+          srcset="../img/save.png 1x, ../img/save@x2.png 2x"
+        />
+      </a>
+    </li>
+    <li class="fonds-elm">
+      <a
+        class="fonds-link"
+        href="https://www.projecthope.org/country/ukraine/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="num-order">02</div>
+        <img
+          src="../img/hope.png"
+          alt="Project HOPE"
+          height="32"
+          srcset="../img/hope.png 1x, ../img/hope@2x.png 2x"
+        />
+      </a>
+    </li>
+    <li class="fonds-elm">
+      <a
+        class="fonds-link"
+        href="https://internationalmedicalcorps.org/country/ukraine/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="num-order">03</div>
+        <img
+          src="../img/imc.png"
+          height="32"
+          alt="International Medical Corps"
+          srcset="../img/imc.png 1x, ../img/imc@2x.png 2x"
+        />
+      </a>
+    </li>
+    <li class="fonds-elm">
+      <a
+        class="fonds-link"
+        href="https://www.razomforukraine.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="num-order">04</div>
+        <img
+          src="../img/razom.png"
+          alt="RAZOM"
+          srcset="../img/razom.png 1x, ../img/razom@2x.png 2x"
+        />
+      </a>
+    </li>
+    <li class="fonds-elm">
+      <a
+        class="fonds-link"
+        href="https://www.actionagainsthunger.org/location/europe/ukraine/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="num-order">05</div>
+        <img
+          src="../img/aahunger.png"
+          alt="Action against hunger"
+          srcset="../img/aahunger.png 1x, ../img/aahunger@2x.png 2x"
+        />
+      </a>
+    </li>
+    <li class="fonds-elm">
+      <a
+        class="fonds-link"
+        href="https://prytulafoundation.org/en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="num-order">06</div>
+        <img
+          src="../img/prytula.png"
+          alt="Serhiy Prytula Charity Foundation"
+          srcset="../img/prytula.png 1x, ../img/prytula@2x.png 2x"
+        />
+      </a>
+    </li>
+    <li class="fonds-elm">
+      <a
+        class="fonds-link"
+        href="https://www.msf.org/ukraine"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="num-order">07</div>
+        <img
+          src="../img/medsfront.png"
+          alt="Medicins Sans Frontieres"
+          srcset="../img/medsfront.png 1x, ../img/medsfront@2x.png 2x"
+        />
+      </a>
+    </li>
+    <li class="fonds-elm">
+      <a
+        class="fonds-link"
+        href="https://www.wvi.org/emergencies/ukraine"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="num-order">08</div>
+        <img
+          src="../img/worldvision.png"
+          alt="World vision"
+          srcset="../img/worldvision.png 1x, ../img/worldvision@2x.png 2x"
+        />
+      </a>
+    </li>
+    <li class="fonds-elm">
+      <a
+        class="fonds-link"
+        href="https://u24.gov.ua/uk"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="num-order">09</div>
+        <img
+          src="../img/united.png"
+          alt="UNITED24"
+          srcset="../img/united.png 1x, ../img/united@2x.png 2x"
+        />
+      </a>
+    </li>
+  </ol>
+
+  <div class="center">
+    <button type="button" class="nav-btn">
+      <svg class="icon icon-down" width="22" height="22">
+        <use href="../img/icon.svg#icon-down"></use>
+      </svg>
+      <svg class="icon icon-up is-hidden" width="22" height="22">
+        <use href="../img/#icon-up"></use>
+      </svg>
+    </button>
+  </div>
 </div>
 
+      <!-- <div class="selected-category-list">
+    <h1 class="home-page-title">Best Sellers <span class="home-page-title-accent">Books</span></h1>
+    <ul class="best-sellers-books">
+    </ul> 
+</div>
+ -->
       <button class="scrollBtn scrollBtn-hide" type="button">
   <svg class="scrollIcon" width="24" height="24">
-    <use href="/project-DreamTeam09/assets/sprit-3af1f536.svg#icon-arrow-back-ios-rounded"></use>
+    <use href="/project-DreamTeam09/assets/sprit-84edf0a2.svg#icon-arrow-back-ios-rounded"></use>
   </svg>
 </button>
 
+
+      <!-- <div class="category-container">
+    <ul class="category">
+        <li><a href="#" target="_self" class="genre active">All categories</a></li>
+    </ul>
+</div> -->
+
+      <div class="selected-category-list">
+    <h1 class="home-page-title">Best Sellers <span class="home-page-title-accent">Books</span></h1>
+    <ul class="best-sellers-books">
+    </ul> 
+</div>
+
+      <!-- <button class="scrollBtn scrollBtn-hide" type="button">
+  <svg class="scrollIcon" width="24" height="24">
+    <use href="./img/sprit.svg#icon-arrow-back-ios-rounded"></use>
+  </svg>
+</button>
+ -->
     </main>
-    <!-- Loads the specified .html file -->
-    <section class="section footer_section">
-  <div class="footer_container">
-    <div class="footer_wrapper">
-      <p class="">
-        © 2023 | All Rights Reserved | Developed by GoIt DreamTeam
-        <svg class="footer_icon heart_beats" width="24" height="24">
-          <use href="/project-DreamTeam09/assets/sprit-3af1f536.svg#tryzub"></use>
-        </svg>
-      </p>
-    </div>
-  </div>
-</section>
 
     <div class="js-backdrop-modal is-hidden">
       <div class="modal about-book-modal">
-  <button
-    id="modal-close"
-    class="close-modal-btn"
-    type="button"
-    aria-label="close"
-  >
+  <button id="modal-close" class="close-modal-btn" type="button" aria-label="close">
     <svg class="button--close-icon" width="28" height="28">
-      <use href="/project-DreamTeam09/assets/sprit-3af1f536.svg#close"></use>
+      <use href="/project-DreamTeam09/assets/sprit-84edf0a2.svg#close"></use>
     </svg>
   </button>
-  <div class="overlay" id="allModal"></div>
+  <div id="allModal"></div>
   <div class="storage-button-wrapper">
     <button type="button" class="add-storage-button modal-id-buttons">
       Add to shopping list
@@ -197,8 +315,20 @@
     </div>
   </div>
 </div>
-
     </div>
+    <section class="section footer_section">
+  <div class="footer_container">
+    <div class="footer_wrapper">
+      <p class="">
+        © 2023 | All Rights Reserved | Developed by GoIt DreamTeam
+        <svg class="footer_icon heart_beats" width="24" height="24">
+          <use href="/project-DreamTeam09/assets/sprit-84edf0a2.svg#tryzub"></use>
+        </svg>
+      </p>
+    </div>
+  </div>
+</section>
+
     
   </body>
 </html>
