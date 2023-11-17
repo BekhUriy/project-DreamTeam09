@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-   <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <link rel="icon" type="image/svg+xml" href="/project-DreamTeam09/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sopping-list</title>
     <link
@@ -13,6 +13,21 @@
       referrerpolicy="no-referrer"
     />
     
+    <style>
+      /* Стилізація для простого прикладу */
+      .pagination {
+        margin-top: 20px;
+      }
+      button {
+        cursor: pointer;
+        padding: 5px 10px;
+        margin: 0 5px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    </style>
     <script type="module" crossorigin src="/project-DreamTeam09/assets/vendor-1c5e86dd.js"></script>
     <script type="module" crossorigin src="/project-DreamTeam09/assets/index-e8137bf5.js"></script>
     <link rel="stylesheet" href="/project-DreamTeam09/assets/index-23297306.css">
@@ -94,7 +109,7 @@
       <h2 class="header-text">Support Ukraine</h2>
     </div>
     <img
-      src="../img/coat-of-arms.png"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAgCAYAAAASYli2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHlSURBVHgBrVbRccIwDBW9/jcbkA3IBk03oBM0G7QbABOUTgCdADpBYILQCcIGYQNXSp6J4jiE9PLudDaW9Cw5kg6iO2CMSVg+aCwwWc5S3Guc9OgjUyPqsY0JhhuWoMtIEcY3yITDkDLOfKROhHEH2c4aWMIC66fHOLyVMp8tNIclTCGtKCRqRTjtuEx8ty7hVemJokqn493gWxI+WOVkMjnzcmCJPW8pugu1MWf5gW+JB8fgG2vscb440YlNgCCoi/CENaR+RI6Pl/AygDB0fNqE6i2eqB9T+DQifPQYnqlOpxGNfCwmsBEFsKXOCIETqZSduoyc/fkmIcqlFFU6miR27KT+wk5CRgqnExwEb1gl1WfsbbmELLtG3aLSc1X1S6Wzg2Hva03er3EmpJluPePrV3VJbOoxtvFceIXu5bm6LTR1b2eKIFW9G5h6bM3t/koIh6VpQz/BAmeFqzfutFFOsbrZIlPRGZWJfs/mtLHgwj3wcsTPF5YVVaUjzl8sr9AdYduA7RR5j1Cd60G6pap0pDTWVJfTzPEp23VS5j0iJMKV53xG1fDcs/yyvONcUpboE6XrhyqZNX7nIthvoItoCPBVC5DnEHtRTkNh6s7IFGGKs4T+g75CH4N0SWPADPg79wcIXP3cyVjRhAAAAABJRU5ErkJggg=="
       alt="coat of arms of Ukraine"
       srcset="../img/coat-of-arms.png 1x, ../img/coat-of-arms@2x.png 2x"
     />
@@ -252,9 +267,6 @@
   </div>
 </div>
 
-
-    <!-- Наталія Коваль -->
-
     <section class="shopping">
   <div class="shopping-wrapper">
     <h1 class="shopping-heading">
@@ -274,7 +286,73 @@
   </div>
 </section>
 
+    <ul id="list"></ul>
+    <div class="pagination">
+      <button id="prevPage">Previous</button>
+      <span id="currentPage"></span>
+      <button id="nextPage">Next</button>
+    </div>
 
+    <script>
+      // Приклад масиву покупок
+      const shoppingList = [
+        'Item 1',
+        'Item 2',
+        'Item 3',
+        'Item 4',
+        'Item 5',
+        'Item 6',
+        'Item 7',
+        'Item 8',
+        'Item 9',
+        'Item 10',
+        'Item 11',
+        'Item 12',
+        'Item 13',
+        'Item 14',
+        'Item 15',
+      ];
+
+      const itemsPerPage = 5; // Кількість елементів на сторінці
+      let currentPage = 1; // Поточна сторінка
+
+      function displayCurrentPage() {
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const currentItems = shoppingList.slice(startIndex, endIndex);
+
+        const listElement = document.getElementById('list');
+        listElement.innerHTML = '';
+
+        currentItems.forEach(item => {
+          const listItem = document.createElement('li');
+          listItem.textContent = item;
+          listElement.appendChild(listItem);
+        });
+
+        document.getElementById(
+          'currentPage'
+        ).textContent = `Page ${currentPage}`;
+      }
+
+      displayCurrentPage();
+
+      document.getElementById('nextPage').addEventListener('click', () => {
+        currentPage++;
+        if (currentPage > Math.ceil(shoppingList.length / itemsPerPage)) {
+          currentPage = Math.ceil(shoppingList.length / itemsPerPage);
+        }
+        displayCurrentPage();
+      });
+
+      document.getElementById('prevPage').addEventListener('click', () => {
+        currentPage--;
+        if (currentPage < 1) {
+          currentPage = 1;
+        }
+        displayCurrentPage();
+      });
+    </script>
     
   </body>
 </html>
