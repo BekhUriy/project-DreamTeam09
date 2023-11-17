@@ -48,4 +48,4 @@
                     <div class="num-order">${l}</div>
                 <img src="./img/support-ua/${a}.png" alt="${s}" srcset="./img/support-ua/${a}.png 1x, ./img/support-ua/${a}@2x.png 2x">
             </a></li>`}).join("");document.querySelector(".fonds").insertAdjacentHTML("beforeend",t)}H(P);export{V as o};
-//# sourceMappingURL=support-slider-929a0ab0.js.map
+//# sourceMappingURL=support-slider-95b42e1d.js.map
