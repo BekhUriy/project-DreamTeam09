@@ -14,7 +14,7 @@
 @import url('./reset.css');
 @import url('./scrollBtn.css');
 @import url('./support-ua.css');
-
+@import url('./loader.css');
 
 :root {
   font-family: DM Sans, sans-serif;
