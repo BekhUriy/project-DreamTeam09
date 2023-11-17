@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!--     <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <link rel="icon" type="image/svg+xml" href="/project-DreamTeam09/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelf</title>
     <link
@@ -12,8 +12,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     
-    <link rel="stylesheet" href="/project-DreamTeam09/assets/styles-23297306.css">
+    <script type="module" crossorigin src="/project-DreamTeam09/assets/vendor-1c5e86dd.js"></script>
+    <script type="module" crossorigin src="/project-DreamTeam09/assets/index-e8137bf5.js"></script>
+    <link rel="stylesheet" href="/project-DreamTeam09/assets/index-23297306.css">
   </head>
 
   <body>
@@ -89,21 +92,23 @@
 
     <main class="container">
       <!-- Зоряна Чернишова -->
-
-      <!-- <div class="category-container">
+      <div class="home-page">
+        <!-- <div class="aside"> -->
+        <aside>
+          <div class="category-container">
     <ul class="category">
         <li><a href="#" target="_self" class="genre active">All categories</a></li>
     </ul>
 </div>
-      <div class="donation">
+          <div class="donation">
   <div class="support-header">
     <div>
       <h2 class="header-text">Support Ukraine</h2>
     </div>
     <img
-      src="./img/coat-of-arms.png"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAgCAYAAAASYli2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHlSURBVHgBrVbRccIwDBW9/jcbkA3IBk03oBM0G7QbABOUTgCdADpBYILQCcIGYQNXSp6J4jiE9PLudDaW9Cw5kg6iO2CMSVg+aCwwWc5S3Guc9OgjUyPqsY0JhhuWoMtIEcY3yITDkDLOfKROhHEH2c4aWMIC66fHOLyVMp8tNIclTCGtKCRqRTjtuEx8ty7hVemJokqn493gWxI+WOVkMjnzcmCJPW8pugu1MWf5gW+JB8fgG2vscb440YlNgCCoi/CENaR+RI6Pl/AygDB0fNqE6i2eqB9T+DQifPQYnqlOpxGNfCwmsBEFsKXOCIETqZSduoyc/fkmIcqlFFU6miR27KT+wk5CRgqnExwEb1gl1WfsbbmELLtG3aLSc1X1S6Wzg2Hva03er3EmpJluPePrV3VJbOoxtvFceIXu5bm6LTR1b2eKIFW9G5h6bM3t/koIh6VpQz/BAmeFqzfutFFOsbrZIlPRGZWJfs/mtLHgwj3wcsTPF5YVVaUjzl8sr9AdYduA7RR5j1Cd60G6pap0pDTWVJfTzPEp23VS5j0iJMKV53xG1fDcs/yyvONcUpboE6XrhyqZNX7nIthvoItoCPBVC5DnEHtRTkNh6s7IFGGKs4T+g75CH4N0SWPADPg79wcIXP3cyVjRhAAAAABJRU5ErkJggg=="
       alt="coat of arms of Ukraine"
-      srcset="./img/coat-of-arms.png 1x, ./img/coat-of-arms@2x.png 2x"
+      srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAgCAYAAAASYli2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHlSURBVHgBrVbRccIwDBW9/jcbkA3IBk03oBM0G7QbABOUTgCdADpBYILQCcIGYQNXSp6J4jiE9PLudDaW9Cw5kg6iO2CMSVg+aCwwWc5S3Guc9OgjUyPqsY0JhhuWoMtIEcY3yITDkDLOfKROhHEH2c4aWMIC66fHOLyVMp8tNIclTCGtKCRqRTjtuEx8ty7hVemJokqn493gWxI+WOVkMjnzcmCJPW8pugu1MWf5gW+JB8fgG2vscb440YlNgCCoi/CENaR+RI6Pl/AygDB0fNqE6i2eqB9T+DQifPQYnqlOpxGNfCwmsBEFsKXOCIETqZSduoyc/fkmIcqlFFU6miR27KT+wk5CRgqnExwEb1gl1WfsbbmELLtG3aLSc1X1S6Wzg2Hva03er3EmpJluPePrV3VJbOoxtvFceIXu5bm6LTR1b2eKIFW9G5h6bM3t/koIh6VpQz/BAmeFqzfutFFOsbrZIlPRGZWJfs/mtLHgwj3wcsTPF5YVVaUjzl8sr9AdYduA7RR5j1Cd60G6pap0pDTWVJfTzPEp23VS5j0iJMKV53xG1fDcs/yyvONcUpboE6XrhyqZNX7nIthvoItoCPBVC5DnEHtRTkNh6s7IFGGKs4T+g75CH4N0SWPADPg79wcIXP3cyVjRhAAAAABJRU5ErkJggg== 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABACAYAAABoWTVaAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARUSURBVHgBzVnhdRoxDBZ5/R86QZ0JSifoZYKSCXKdIGwATBAyAXQC0gmgEySZ4K4TQCdQbXASWSfZPrgkfO/dwyfL1mdZ1tkGoEMg4o19RnCKsMQMvsLAqcGSmhOCKzglWEJ9bKIPHeAMukEhyIbQAc7sSCv7lHAcTKYsG5ZT4bid+Y7mPoYMHIZOptMTc+Eyt0UXx4ZOcemEH7kCve0Hz2UHHoNO4RCSNRwJb3PnNSqXFslOsQNPbnMVNXIO2ip2issWqWKbKdMwBmVRcYI1KQ98wxwcTNBnkFLhsFOgKO3zwGQFpI0YIVHntqtIG1ce0U6kKb6CcPS5XuTI8SCf2kverkGw1+vV9ueOiIqUN3wbjk2sjV8YJRFNpX60RTKDcCQ5n61g5NbY34R+Qcq1fRaSkkjQdu6MUS9eZ6zorVLWcEPKa2UWopuFNSk7cgOII5ugn17a352mqxK0I1ozQ20I1gndgupaW4+aYmq79ZuUv0J3oIOtY4opgrXSqYTUoqCgg32KKbYh2GZL9S9RbxQbDaQI0rgymP9t3iTqDSnXMcUUQR685xFdWvdZU7KD5KESXfFRgkJu+hZRp949z9RzeIzoZh2aalI2kGc4phd40H8UVOQQDOIwomcO0It6zyGHIE0D4tT5uOoz2ReQQeXJT2JbD2q50AiyS0WXDiSaAx1yCD4miDgUgkwbDJV37sG+kgu/C7IfXODb0vbHxaCPrVsmNkzHvUveMkIcGvZ+K+TFPIK+oXQU5B0WoOMnezfCuzsDDQFaEPReWUI4HWv7TKE5LXTjWUOYN/nUb30f90w+Vz+j7CRWetlIkksDYXrO0CTndIf7EyTFRJJzght/9NtQo6AAw0tL9IQHTDaLtOeDqZjtBkEJw0zvrUjdCsNB95U+hinjOWnGKPJr9v6LlKek7MiNQEZ6+8YIz3B/cbjE0O2GtWncCAj9rmJeFPp48LaDadcWScHkFe6D1/j6sdSOEeB9TLy87/uqFNtlkqBXnKGMCsNAVm/0senFSulzRtrkEUyQ5ITHSMIA914aI1uRChbMZj5B0mCFeUQNNmNLwwqFHIltCTKvLDFNskrozDFy+OIEs/8n8Vtz2vHCPhcQphcDYVq68zr0amOQ2uZTtP0jh24Untyhyj4lhHnvGe46beQPXjl7Shm5UyzoFqyOLogNq+Nfnewp/sTqz1G/3e8LnVHdNbzeI9aszrCm7ntdg4zg3NNzLOGE0dWfiW+GkyfoYvCihb7bGxa+7FbmFalzZ5fnGFxDuN2n7XhdnKB2NyzBhusfYsjYZ/uc02xdcOVG+8XwYPTUxmbbKV6Qcmyf9wKfumgGuIe3BCr7PPu7IHK6u66IvGpr75BFkrtb3u0bIcyBU3gPYHN3M+AeFL4erb13DEGD4aetYqQrbO5qCnhPYPPsHMMEPgLYPNdKWMBHIkFyAacAZbqTOfJdga8Lxz0DOEXg/ixcQof4D9fiJ8iCe1oUAAAAAElFTkSuQmCC 2x"
     />
   </div>
   <ol class="fonds">
@@ -259,59 +264,42 @@
   </div>
 </div>
 
-      
-      <button class="scrollBtn scrollBtn-hide" type="button">
-  <svg class="scrollIcon" width="24" height="24">
-    <use href="./img/sprit.svg#icon-arrow-back-ios-rounded"></use>
-  </svg>
-</button>
-
-
-      
-
-      <div class="selected-category-list">
+        </aside>
+        <!-- </div> -->
+        <!--ENOENT: no such file or directory, open '/home/runner/work/project-DreamTeam09/project-DreamTeam09/src/partials/modal-about.html'-->
+        <div class="selected-category-list">
     <h1 class="home-page-title">Best Sellers <span class="home-page-title-accent">Books</span></h1>
     <ul class="best-sellers-books">
     </ul> 
 </div>
- -->
+
+        <button class="scrollBtn scrollBtn-hide" type="button">
+  <svg class="scrollIcon" width="24" height="24">
+    <use href="/project-DreamTeam09/assets/sprit-84edf0a2.svg#icon-arrow-back-ios-rounded"></use>
+  </svg>
+</button>
+
+      </div>
     </main>
+    <!-- Loads the specified .html file -->
 
-    <!-- <div class="js-backdrop-modal is-hidden">
-      <div class="modal about-book-modal">
-  <button id="modal-close" class="close-modal-btn" type="button" aria-label="close">
-    <svg class="button--close-icon" width="28" height="28">
-      <use href="./img/sprit.svg#close"></use>
-    </svg>
-  </button>
-  <div id="allModal"></div>
-  <div class="storage-button-wrapper">
-    <button type="button" class="add-storage-button modal-id-buttons">
-      Add to shopping list
-    </button>
+    ENOENT: no such file or directory, open '/home/runner/work/project-DreamTeam09/project-DreamTeam09/src/partials/modal-about.html'
 
-    <div class="remove-modal-btn">
-      <button type="button" class="storage-delete-button modal-id-buttons">
-        Remove from the shopping list
-      </button>
-      <p class="storage-description"></p>
-    </div>
-  </div>
-</div>
-    </div> -->
-    <!-- <section class="section footer_section">
+    <!-- ENOENT: no such file or directory, open '/home/runner/work/project-DreamTeam09/project-DreamTeam09/src/partials/modal-about.html' -->
+    <section class="section footer_section">
   <div class="footer_container">
     <div class="footer_wrapper">
       <p class="">
         © 2023 | All Rights Reserved | Developed by GoIt DreamTeam
         <svg class="footer_icon heart_beats" width="24" height="24">
-          <use href="./img/sprit.svg#tryzub"></use>
+          <use href="/project-DreamTeam09/assets/sprit-84edf0a2.svg#tryzub"></use>
         </svg>
       </p>
     </div>
   </div>
 </section>
- -->
-    <!-- <script type="module" src="/index.js"></script> -->
+
+
+    
   </body>
 </html>
