@@ -1,3 +1,38 @@
+const navBTN = document.querySelector('.nav-btn');
+
+navBTN.addEventListener('click', scrollDown);
+
+function scrollDown() {
+    const fondsList = document.querySelector('.fonds');
+    const liHeight = fondsList.querySelector('li').offsetHeight;
+    const down = document.querySelector('.icon-down');
+    const up = document.querySelector('.icon-up');
+
+        // Check the current scroll position
+        if (fondsList.scrollTop + fondsList.clientHeight >= fondsList.scrollHeight) {
+            // Scroll to the top if at the bottom
+             
+            while (fondsList.scrollTop !== 0) {
+                
+                fondsList.scrollTop -= liHeight;
+
+            }
+            
+        } else {
+            
+            // Scroll down by liHeight
+            fondsList.scrollTop += 2*liHeight;
+        }
+    
+    if (fondsList.scrollTop + fondsList.clientHeight < fondsList.scrollHeight) {
+        down.classList.remove('is-hidden');
+        up.classList.add('is-hidden');
+    }
+    else {
+        down.classList.add('is-hidden');
+        up.classList.remove('is-hidden');
+    }
+}
 
 const donate = [
   {
@@ -48,98 +83,18 @@ const donate = [
   },
 ]
 
-const supportFonds = [
-    {
-    title: 'Save the Children',
-    url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-    img: 'save',
-  },
-  {
-    title: 'Project HOPE',
-    url: 'https://www.projecthope.org/country/ukraine/',
-    img: 'hope',
-  },
-  {
-    title: 'International Medical Corps',
-    url: 'https://internationalmedicalcorps.org/country/ukraine/',
-    img: 'imc',
-    },
-  {
-    title: 'RAZOM',
-    url: 'https://www.razomforukraine.org/',
-    img: 'razom',
-  },
-  {
-    title: 'Action against hunger',
-    url: 'https://www.actionagainsthunger.org/location/europe/ukraine/',
-    img: 'aahunger',
-    },
-  {
-    title: 'Serhiy Prytula Charity Foundation',
-    url: 'https://prytulafoundation.org/en',
-    img: 'prytula',
-    },
-      {
-    title: 'Medicins Sans Frontieres',
-    url: 'https://www.msf.org/ukraine',
-    img: 'medsfront',
-    },
-  {
-    title: 'World vision',
-    url: 'https://www.wvi.org/emergencies/ukraine',
-    img: 'worldvision',
-  },
-  
-  {
-    title: 'UNITED24',
-    url: 'https://u24.gov.ua/uk',
-    img: 'united',
-  },
-];
-
-const supportListEl = document.querySelector('.support-list');
-
-function supportListCreateMarkup(supportFonds) {
-    return supportFonds.map(({ title, url, img, img2x }, index) => `
-        <li class="support-item">
-            <span class='support-item-num'>0${index + 1}</span>
-            <a class="support-link" target='blank' href="${url}">
-                <img
-                    class="support-img"
-                    src="${img}"
-                    srcset="${img} 1x, ${img2x} 2x"
-                    alt="${title}"
-                />
-            </a>
-        </li>`).join('');
+function fondMarkup(donate) {
+    const markup = donate.map((el, index) => {
+        const { title, url, img } = el;
+        const orderNumber = ('0' + (index + 1)).slice(-2);
+        return `<li class="fonds-elm">
+                <a class="fonds-link" href="${url}" target="_blank" rel="noopener noreferrer">
+                    <div class="num-order">${orderNumber}</div>
+                <img src="./img/suport-ua/${img}.png" alt="${title}" srcset="./img/suport-ua/${img}.png 1x, ./img/suport-ua/${img}@2x.png 2x">
+            </a></li>`
+    }).join('');
+    const fonds = document.querySelector('.fonds');
+    fonds.insertAdjacentHTML('beforeend', markup)
 }
 
-supportListEl.innerHTML = supportListCreateMarkup(supportFonds);
-
-const supportSlideEl = document.querySelector('.support-slide');
-const supportSlideDownBtnEl = document.querySelector('.support-slide-down-btn');
-const supportSlideUpBtnEl = document.querySelector('.support-slide-up-btn');
-
-supportSlideEl.addEventListener('click', slideTo);
-
-function slideTo() {
-    if (supportSlideEl.classList.contains('top')) {
-        supportSlideEl.classList.remove('top');
-        supportSlideUpBtnEl.style.display = 'none';
-        supportSlideDownBtnEl.style.display = 'block';
-        slideToTop();
-    } else {
-        slideToBottom();
-        supportSlideEl.classList.add('top');
-        supportSlideDownBtnEl.style.display = 'none';
-        supportSlideUpBtnEl.style.display = 'block';
-    }
-}
-
-function slideToTop() {
-    supportListEl.scrollTop = 0;
-}
-
-function slideToBottom() {
-    supportListEl.scrollTop = supportListEl.scrollHeight;
-}
+fondMarkup(donate)
