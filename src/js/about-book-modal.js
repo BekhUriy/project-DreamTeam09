@@ -68,6 +68,8 @@ async function fetchBookById(bookId) {
       list_name: data.list_name,
 
       id: data._id,
+      
+      description: data.description,
     };
 
     return data;
@@ -136,7 +138,7 @@ function createMarkup(data) {
         </a>
         </li>
         </ul>
-        
+
         </div>`
 ;
 
